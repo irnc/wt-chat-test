@@ -1,0 +1,17 @@
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<pre id="result"></pre>
+<script>
+
+function run() {
+  const result = document.getElementById('result');
+
+  fetch('https://wt-chat-sails.now.sh/chat')
+    .then(res => res.json())
+    .then(chats => {
+      result.innerHTML = JSON.stringify(chats, null, 2);
+    });
+}
+
+run();
+
+</script>
